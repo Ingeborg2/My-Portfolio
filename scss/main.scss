@@ -1,0 +1,144 @@
+@import "config";
+@import "menu";
+* {
+    box-sizing: border-box;
+}
+
+body {
+    @include background;
+    background-color: $primary-color;
+    color: setTextColor($primary-color);
+    height: 100%;
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+main {
+    padding: 6rem;
+    min-height: calc(100vh - 3.75rem);
+    .icons {
+        margin-top: 1rem;
+        a {
+            padding: 0.4rem;
+            &:hover {
+                color: $secondary-color;
+                @include easeOut();
+            }
+        }
+    }
+    &#home {
+        overflow: hidden;
+        h1 {
+            margin-top: 20vh;
+        }
+    }
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 400;
+    &.lg-heading {
+        font-size: 3rem;
+    }
+    &.sm-heading {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+a {
+    color: setTextColor($primary-color);
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.text-secondary {
+    color: $secondary-color;
+}
+
+.about-info {
+    font-weight: 300;
+    display: grid;
+    grid-gap: 2.5rem;
+    grid-template-areas: "bio-image bio bio" "job-1 skills rest";
+    grid-template-columns: repeat(3, 1fr);
+    & p {
+        font-weight: 400;
+        font-family: Raleway;
+    }
+    .bio-image {
+        grid-area: bio-image;
+        margin: auto;
+        width: 220px;
+        height: 220px;
+        background: url("../assets/IMG_240.jpg");
+        background-color: #fff;
+        background-size: 85%;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        border: solid 3px $secondary-color;
+    }
+    .bio {
+        grid-area: bio;
+        font-size: 1rem;
+    }
+    .job-1 {
+        grid-area: job-1;
+    }
+    .job,
+    .skills,
+    .rest {
+        padding: 0.8rem;
+        background: lighten($primary-color, 5);
+        border-bottom: 3px $secondary-color solid;
+    }
+    .job h4 {
+        font-weight: 300;
+    }
+    .job h3,
+    .skills h3,
+    .rest h3 {
+        margin-bottom: 1.5rem;
+    }
+    .job p,
+    .skills p,
+    .rest p {
+        font-size: 0.8rem;
+        margin: 0.4rem 0 0.4rem;
+    }
+    .rest {
+        display: grid;
+        grid-template-areas: "comp" "lang";
+    }
+    .lang h3 {
+        margin-top: 1.5rem;
+    }
+}
+
+#main-footer {
+    padding: 0.5rem;
+    height: 3.75rem;
+    text-align: center;
+    background: darken($primary-color, 10);
+    color: setTexColor($primary-color);
+}
+
+#main-footer p {
+    margin-top: 0;
+}
+
+#main-footer p:nth-child(2) a {
+    font-size: 0.8rem;
+}
+
+// mediaqueries
+@import "mobile";
