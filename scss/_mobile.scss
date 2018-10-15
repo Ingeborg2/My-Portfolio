@@ -18,6 +18,10 @@
             margin-bottom: 1rem;
         }
     }
+    .menu-btn {
+        top: 10px;
+        right: 15px;
+    }
     ul.menu-nav,
     div.menu-branding {
         float: none;
@@ -50,6 +54,14 @@
     .about-info {
         grid-template-areas: "bio-image" "bio" "job-1" "job-2" "job-3";
         grid-template-columns: 1fr;
+        .bio-image {
+            width: 150px;
+            height: 150px;
+        }
+        .bio p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -62,7 +74,7 @@
         }
         .lg-heading {
             margin-top: 1rem;
-            font-size: 5rem;
+            font-size: 3.5rem;
         }
     }
     .projects {

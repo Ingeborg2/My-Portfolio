@@ -272,6 +272,9 @@ header {
     main .lg-heading {
       line-height: 1.2;
       margin-bottom: 1rem; }
+  .menu-btn {
+    top: 10px;
+    right: 15px; }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -297,7 +300,13 @@ header {
       font-size: 0.7rem; }
   .about-info {
     grid-template-areas: "bio-image" "bio" "job-1" "job-2" "job-3";
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+    .about-info .bio-image {
+      width: 150px;
+      height: 150px; }
+    .about-info .bio p {
+      font-size: 0.9rem;
+      margin-bottom: 0; } }
 
 @media screen and (max-width: 500px) {
   main {
@@ -306,6 +315,6 @@ header {
       margin-top: 10vh; }
     main .lg-heading {
       margin-top: 1rem;
-      font-size: 5rem; }
+      font-size: 3.5rem; }
   .projects {
     grid-template-columns: 1fr; } }
